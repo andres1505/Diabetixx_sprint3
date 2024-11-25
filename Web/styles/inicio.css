@@ -1,0 +1,213 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 50px;
+}
+
+.navbar .logo img {
+    width: 50px;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #4CAF50; /* Cambia a verde al pasar el mouse */
+}
+
+.welcome-section {
+    background-color: #4CAF50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.welcome-image {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.welcome-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-text p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.habits-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.habits-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.explore-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.explore-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #d4d4d4;
+}
+/* Estilo de la sección "Tu Salud, Nuestra Prioridad" */
+.priority-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.priority-section h2 {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.priority-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.priority-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Estilos de la cuadrícula de características */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    color: #333;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #555;
+    font-size: 1em;
+}
+/* Sección Únete a Diabetixx */
+.join-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2e7d32; /* Fondo verde oscuro */
+    padding-top: 60px; /* Espacio para la barra de navegación */
+    color: white;
+}
+
+.join-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    gap: 20px;
+}
+
+.join-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.join-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.join-text p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.join-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #2e7d32;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #43a047;
+    color: white;
+}
+
+.join-image {
+    flex: 1;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}

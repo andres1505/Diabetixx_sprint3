@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Educativo - Diabetixx</title>
+    <link rel="stylesheet" href="/styles/educacion.css">
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/footer.css">
+
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo"><a href="register.html"><img src="./img/fav.png" alt="Logo de Diabetixx"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="educacion.html">Módulo Educativo</a></li>
+            <li><a href="info.html">Foro</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <!-- Título del Módulo Educativo -->
+    <div class="module-title">
+        <h1>Módulo Educativo: Alimentación y Diabetes</h1>
+        <p>Explora artículos y videos educativos sobre la alimentación saludable para personas con diabetes.</p>
+    </div>
+
+    <!-- Barra de Búsqueda -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchContent()" placeholder="Buscar temas...">
+    </div>
+
+    <!-- Sección de Artículos y Videos -->
+    <div id="content" class="content-grid">
+        <!-- Ejemplos de artículos y videos -->
+        <div class="content-item" data-title="Guía de Alimentación Saludable">
+            <h2>Guía de Alimentación Saludable</h2>
+            <p>Descubre cómo una dieta equilibrada puede ayudarte a controlar tu diabetes.</p>
+            <a href="https://medlineplus.gov/spanish/ency/article/002093.htm" target="_blank">Leer más</a>
+        </div>
+
+        <div class="content-item" data-title="Beneficios de una Dieta Balanceada">
+            <h2>Beneficios de una Dieta Balanceada</h2>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/z9ov3C7XM3o?si=gYHd60laDhCzjiD2" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-item" data-title="Planificación de Comidas para Diabéticos">
+            <h2>Planificación de Comidas para Diabéticos</h2>
+            <p>Consejos prácticos para planificar tus comidas y mantener tus niveles de glucosa estables.</p>
+            <a href="https://www.ejemplo.com/planificacion-comidas" target="_blank">Leer más</a>
+        </div>
+
+        <div class="content-item" data-title="Alimentos que Ayudan a Controlar la Diabetes">
+            <h2>Alimentos que Ayudan a Controlar la Diabetes</h2>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/T4eYYk96xEE?si=p8LIY5biidrtwNCS" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Nuevos videos agregados -->
+        <div class="content-item" data-title="Consejos de Nutrición para Diabéticos">
+            <h2>Consejos de Nutrición para Diabéticos</h2>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/81nVgmFvxe4?si=r5ox1UjsNbCk0m7L" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-item" data-title="Ejercicios para Mejorar la Salud en Diabéticos">
+            <h2>Ejercicios para Mejorar la Salud en Diabéticos</h2>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/D9K5Oi9iiOA?si=lkkMUCl2pMJdjX9z" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+
+<!-- <script>
+    // Cargar la plantilla del footer (footer.html)
+    fetch("templates/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Error al cargar el footer:", error));
+</script> -->
+
+
+    <script src="educacion.js"></script>
+</body>
+</html>
+

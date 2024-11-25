@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Diabetixx</title>
+    <link rel="stylesheet" href="/styles/perfil.css">
+    <link rel="stylesheet" href="/styles/inicio.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="inicio.html"><img src="./img/fav.png" alt="Logo de Diabetixx"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="educacion.html">Módulo Educativo</a></li>
+            <li><a href="info.html">Foro</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor del perfil -->
+    <div class="profile-container">
+        <h1>Tu Perfil</h1>
+        <div class="profile-card">
+            <!-- Foto de Perfil -->
+            <div class="profile-photo">
+                <img id="profile-image" src="./img/default-profile.png" alt="Foto de Perfil">
+                <label for="upload-photo" class="upload-button" style="display: none;">Cambiar Foto</label>
+                <input type="file" id="upload-photo" accept="image/*" style="display: none;" onchange="previewProfilePhoto(event)">
+            </div>
+
+            <!-- Información del Perfil -->
+            <form id="profile-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" placeholder="Escribe tu nombre" disabled>
+
+                <label for="age">Edad:</label>
+                <input type="number" id="age" placeholder="Escribe tu edad" min="1" disabled>
+
+                <label for="gender">Género:</label>
+                <select id="gender" disabled>
+                    <option value="">Selecciona tu género</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
+                <label for="weight">Peso (kg):</label>
+                <input type="number" id="weight" placeholder="Escribe tu peso" min="1" disabled>
+
+                <label for="activity-level">Nivel de Actividad:</label>
+                <select id="activity-level" disabled>
+                    <option value="">Selecciona tu nivel</option>
+                    <option value="Bajo">Bajo</option>
+                    <option value="Moderado">Moderado</option>
+                    <option value="Alto">Alto</option>
+                </select>
+
+                <label for="diabetes-condition">¿Padeces de diabetes?</label>
+                <select id="diabetes-condition" disabled>
+                    <option value="">Selecciona una opción</option>
+                    <option value="No">No</option>
+                    <option value="Tipo 1">Sí, Tipo 1</option>
+                    <option value="Tipo 2">Sí, Tipo 2</option>
+                    <option value="Gestacional">Sí, Gestacional</option>
+                </select>
+
+                <button type="button" id="save-button" style="display: none;" onclick="saveProfile()">Guardar Cambios</button>
+            </form>
+
+            <!-- Botón para habilitar edición -->
+            <button type="button" id="edit-button" onclick="enableEditMode()">Editar Perfil</button>
+        </div>
+    </div>
+
+    <script src="/perfil.js"></script>
+    <script>
+        // Cargar el footer desde el archivo 'footer.html'
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/templates/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    const footerContainer = document.createElement('div');
+                    footerContainer.innerHTML = data;
+                    document.body.appendChild(footerContainer);
+                })
+                .catch(error => console.error('Error al cargar el footer:', error));
+        });
+    </script>           
+</body>
+</html>
+
+
+
+

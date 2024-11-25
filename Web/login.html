@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Diabetixx</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Iniciar Sesión en Diabetixx</h1>
+    <div class="form-container">
+       <form id="loginForm">
+            <label for="login-email">Correo:</label>
+            <input type="email" id="login-email" name="email" required>
+
+            <label for="login-password">Contraseña:</label>
+            <input type="password" id="login-password" name="password" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        // Manejar el inicio de sesión
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            // Verifica el usuario y contraseña en localStorage
+            const storedPassword = localStorage.getItem(email);
+            if (storedPassword && storedPassword === password) {
+                alert('Inicio de sesión exitoso.');
+                localStorage.setItem('loggedInUser', email); // Guarda el usuario logueado
+                window.location.href = 'inicio.html'; // Redirige a la página de inicio
+            } else {
+                alert('Credenciales incorrectas.');
+            }
+        });
+    </script>
+</body>
+</html>

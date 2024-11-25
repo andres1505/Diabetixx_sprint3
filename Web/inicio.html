@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Diabetixx</title>
+    <link rel="stylesheet" href="/styles/inicio.css">
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/footer.css">
+
+</head>
+<body>
+    
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo"><a href="register.html"><img src="./img/fav.png" alt="Logo de Diabetixx"></a>
+            
+        </div>
+        <ul class="nav-links">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="educacion.html">Módulo Educativo</a></li>
+            <li><a href="info.html">Foro</a></li>            
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Principal de Bienvenida -->
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <img src="/img/ensalada.jpg" alt="Imagen ensalada" class="welcome-image">
+            <div class="welcome-text">
+                <h1>Bienvenido a Diabetixx: Un Futuro Saludable</h1>
+                <p><span>10+</span> Hábitos Saludables</p>
+                <div class="habits-icons">
+                    <img src="./img/enfer.jfif" alt="Ícono 1">
+                    <img src="./img/inicio1.jfif" alt="Ícono 2">
+                    <img src="./img/inicio2.jfif" alt="Ícono 3">
+                    <img src="./img/inicio3.jfif" alt="Ícono 4">
+                </div>
+                <a href="educacion.html" class="explore-button">Explora Más</a>
+                <p class="description">Descubre cómo transformar tus hábitos alimenticios para mejorar tu bienestar y controlar la diabetes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Tu Salud, Nuestra Prioridad -->
+    <section class="priority-section">
+        <h2>Todo lo que Necesitas</h2>
+        <h1>Tu Salud, Nuestra Prioridad</h1>
+        <p>Diabetixx te ofrece herramientas y recursos para alcanzar tus metas de salud de manera efectiva.</p>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <img src="./img/registro.png" alt="Ícono de registro">
+                <h3>Fácil Registro</h3>
+                <p>Únete a nuestra comunidad y comienza tu viaje hacia una vida más saludable.</p>
+            </div>
+            <div class="feature-item">
+                <img src="./img/educacion1.png" alt="Ícono de educación">
+                <h3>Módulos Educativos</h3>
+                <p>Aprende sobre nutrición y salud con nuestros recursos interactivos.</p>
+            </div>
+            <div class="feature-item">
+                <img src="./img/seguridad.png" alt="Ícono de seguridad">
+                <h3>Seguridad de Datos</h3>
+                <p>Protegemos tu información con el más alto nivel de seguridad.</p>
+            </div>
+            <div class="feature-item">
+                <img src="./img/foro.png" alt="Ícono de foro">
+                <h3>Foros Interactivos</h3>
+                <p>Participa en discusiones y comparte tus experiencias con otros.</p>
+            </div>
+            <div class="feature-item">
+                <img src="./img/perfil.png" alt="Ícono de perfil">
+                <h3>Gestión de Perfil</h3>
+                <p>Administra tus datos de salud y sigue tu progreso.</p>
+            </div>
+            <div class="feature-item">
+                <img src="./img/colaboracion.png" alt="Ícono de colaboración">
+                <h3>Colaboración Continua</h3>
+                <p>Trabaja junto a expertos para mejorar continuamente tu salud.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Únete a Diabetixx (al final de la página) -->
+    <section class="join-section">
+        <div class="join-content">
+            <div class="join-text">
+                <h1>Únete a Diabetixx y Transforma tu Vida</h1>
+                <p>Descubre herramientas y recursos diseñados para mejorar tu salud y bienestar.</p>
+                <a href="info.html" class="join-button">Comunidad →</a>
+            </div>
+            <img src="./img/uneteDiabetixx.jpeg" alt="Imagen de bienestar" class="join-image">
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+<script>
+    // Cargar la plantilla del footer (footer.html)
+    fetch("templates/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Error al cargar el footer:", error));
+</script>
+
+
+</body>
+</html>
+
+
+

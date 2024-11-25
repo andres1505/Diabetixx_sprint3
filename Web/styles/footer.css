@@ -1,0 +1,60 @@
+/* Estilo del Footer */
+.site-footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links li a {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links li a:hover {
+    color: #4CAF50;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: #bbb;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #4CAF50;
+}

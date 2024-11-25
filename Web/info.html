@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetixx Foro</title>
+    <link rel="stylesheet" href="/styles/info.css">
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/footer.css">
+
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo"><a href="register.html"><img src="./img/fav.png" alt="Logo de Diabetixx"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="educacion.html">Módulo Educativo</a></li>
+            <li><a href="info.html">Foro</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de bienvenida -->
+    <div class="welcome-section">
+        <h1>¡Bienvenido/a a Diabetixx Foro!</h1>
+        <p>Esta es la comunidad online para personas con diabetes.</p>
+        <p>Comparte tus preguntas, pensamientos y conocimientos aquí.</p>
+    </div>
+
+    <!-- Sección de Temas Recientes -->
+    <div class="recent-topics">
+        <h2>Temas recientes</h2>
+        <button onclick="addTopic()">Agregar Tema</button>
+        <div id="topics" class="topics-grid">
+            <!-- Los temas se cargarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <!-- Modal para agregar un nuevo tema -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Nuevo Tema</h2>
+            <input type="text" id="newTopic" placeholder="Título del tema">
+            <button onclick="saveTopic()">Guardar</button>
+        </div>
+    </div>
+
+    <!-- Modal para reportar un tema o respuesta -->
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReportModal()">&times;</span>
+            <h2>Reportar Contenido</h2>
+            <p>Selecciona un motivo para el reporte:</p>
+            <select id="reportReason">
+                <option value="spam">Spam</option>
+                <option value="contenido_inapropiado">Contenido Inapropiado</option>
+                <option value="acoso">Acoso</option>
+                <option value="otro">Otro</option>
+            </select>
+            <button onclick="submitReport()">Enviar Reporte</button>
+        </div>
+    </div>
+
+    <!-- Sección de Conversaciones y Respuestas -->
+    <div id="conversation-section" class="conversation-section" style="display:none;">
+        <h2 id="conversation-title"></h2>
+        <div id="conversation-content"></div>
+        <div class="add-response">
+            <input type="text" id="newResponse" placeholder="Escribe una respuesta...">
+            <button onclick="saveResponse()">Responder</button>
+        </div>
+        <button onclick="backToTopics()">Volver a Temas</button>
+    </div>
+    <div id="footer-placeholder"></div>
+
+<!-- <script>
+    // Cargar la plantilla del footer (footer.html)
+    fetch("templates/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Error al cargar el footer:", error));
+</script> -->
+
+
+    <script src="info.js"></script>
+</body>
+</html>
